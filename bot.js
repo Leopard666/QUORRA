@@ -74,17 +74,17 @@ client.on('message', message => {
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
-:rose:  [❖═════ Naomi Rainbow Bot Commands ═══════❖] :rose: 
+:rose:  [❖═════ Quorra Rainbow Bot Commands ═══════❖] :rose: 
   
 ❖═════════════════════════════════════❖  
 
-● $Naomi :arrow_right: STATS BOT.
-● $TDN :arrow_right: $TDN (Role Name).
+● $Quorra :arrow_right: STATS BOT.
+● $TG :arrow_right: $TG (Role Name).
 ● $Ping :arrow_right: BOT PING. 
 
 ❖═════════════════════════════════════❖
 
-:zap: NAOMI BOT MADE BY : THE RARE RANGER :zap:
+:zap: Quorra BOT MADE BY : THE RARE RANGER :zap:
  **`);
 
 message.author.sendEmbed(embed)
@@ -165,7 +165,7 @@ client.on('message', message => {
         ":clock12: " +            "Uptime: " + uptime)
         message.channel.send({embed});
     }
-    if(command === "TG) {
+    if(command === "TG") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
