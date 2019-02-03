@@ -6,7 +6,7 @@ const ownerid = '480540559233122324'
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
-  client.user.setGame( `★ TheDamNation™ ★`,"https://www.twitch.tv/TheRealPredvkill")
+  client.user.setGame( `★ The Grid™ ★`,"https://www.twitch.tv/TheRealPredvkill")
     console.log('')
     console.log('')
     console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -24,7 +24,7 @@ client.on('ready', () => {
     console.log('╚[════════════════════════════════════]╝')
     console.log('')
     console.log('╔[════════════]╗')
-    console.log('Naomi Is Online Now !')
+    console.log('Quorra Is Online Now !')
     console.log('╚[════════════]╝')
     console.log('')
     console.log('')
@@ -47,7 +47,7 @@ message.channel.send({embed:embed});
 });
 
 client.on('message', message => {
-  if (message.content === ('$naomi')) {
+  if (message.content === ('$Quorra')) {
   message.channel.send({
       embed: new Discord.RichEmbed()
           .setAuthor(client.user.username,client.user.avatarURL)
@@ -165,10 +165,10 @@ client.on('message', message => {
         ":clock12: " +            "Uptime: " + uptime)
         message.channel.send({embed});
     }
-    if(command === "TDN") {
+    if(command === "TG) {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
@@ -177,7 +177,7 @@ client.on('message', message => {
 
         if(!message.guild.me.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription("**:warning: I Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
@@ -186,16 +186,16 @@ client.on('message', message => {
 		
 		if(!message.member.guild.roles.find("name", args.join(" "))) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription(":warning: Usage : **`$TDN (Role Name)`** :warning:")
+            .setDescription(":warning: Usage : **`$TG (Role Name)`** :warning:")
             message.channel.send({embed});
             return;
         }
 
         if(message.member.guild.roles.find("name", args.join(" ")) === null) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription(":warning: Something Went Wrong :warning:")
             message.channel.send({embed});
@@ -205,9 +205,9 @@ client.on('message', message => {
 
         if(message.member.guild.roles.find("name", args.join(" ")).position >= message.guild.me.highestRole.position) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription("Naomi : :warning: **RainColor** Role Must Be Higher Than The Mentioned Role !")
+            .setDescription("Quorra : :warning: **RainColor** Role Must Be Higher Than The Mentioned Role !")
             message.channel.send({embed});
             return;
         }
@@ -216,7 +216,7 @@ client.on('message', message => {
         const embed = new Discord.RichEmbed()
         .setAuthor("Rainbow", client.user.avatarURL)
         .setColor(0xE7F436)
-        .setDescription(":white_check_mark: Successfully Applied Naomi Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
+        .setDescription(":white_check_mark: Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
         ":warning: : This Only Lasts 72 Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !")
         message.channel.send({embed});
 
