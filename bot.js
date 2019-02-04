@@ -61,15 +61,12 @@ client.on('message', message => {
   })
 }
 });
-
 client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
     
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
-  message.channel.sendEmbed(embed);
+   message.channel.send('**:white_check_mark: Done" , " تــــم ارســالك في الخــاص :e_mail:**');
+   const embed = new Discord.RichEmbed()
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
