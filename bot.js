@@ -249,8 +249,9 @@ function sin_to_hex(i, phase) {
 let place = 0;
 
 client.on('ready', function(){
+  client.user.setStatus("dnd");
     var ms = 10000 ;
-    var setGame = ['★ $help ★','Grid™ | Server ' ];
+    var setGame = ['★ $help ★','The Grid™ | Server ' ];
     var i = -1;
     var j = 0;
     setInterval(function (){
