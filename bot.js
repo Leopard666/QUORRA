@@ -62,13 +62,13 @@ client.on('message', message => {
 }
 });
 
-
 client.on('message', message => {
-  if (message.author.bot) return;
-   if (message.content === prefix + "help") {
-    
-   message.channel.send('**:white_check_mark: DONE ! : (PLEASE CHECK YOUR MESSAGES PRIVATE) :e_mail:**');
-   const embed = new Discord.RichEmbed()
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
@@ -84,7 +84,7 @@ client.on('message', message => {
 
 ❖═════════════════════════════════════❖
 
-:zap: QUORRA BOT MADE BY : THE RARE RANGER :zap:
+   :zap: QUORRA BOT MADE BY : THE RARE RANGER :zap:
  **`);
 
 message.author.sendEmbed(embed)
@@ -267,4 +267,3 @@ client.on('ready', function(){
 
 })
 client.login(process.env.BOT_TOKEN);
-
