@@ -74,11 +74,11 @@ client.on('message', message => {
   
 ❖═════════════════════════════════════❖  
 
-● :rainbow: $Quorra :arrow_right: STATS BOT ●
+● :signal_strength: : $Quorra :arrow_right: STATS BOT ●
 
 ● :rainbow: $TG :arrow_right: $TG (Role Name) ●
 
-● :rainbow: $Ping :arrow_right: BOT PING ●
+● :rocket: : $Ping :arrow_right: BOT PING ●
 
 ❖═════════════════════════════════════❖
 
