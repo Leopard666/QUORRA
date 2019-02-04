@@ -70,15 +70,15 @@ client.on('message', message => {
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
-:rose:  [❖═════ Quorra Rainbow Bot Commands ═══════❖] :rose: 
+:rainbow:   [❖═════ Quorra Rainbow Bot Commands ═══════❖] :rainbow:  
   
 ❖═════════════════════════════════════❖  
 
-● $Quorra :arrow_right: STATS BOT.
+● :rainbow: $Quorra :arrow_right: STATS BOT.
 
-● $TG :arrow_right: $TG (Role Name).
+● :rainbow: $TG :arrow_right: $TG (Role Name).
 
-● $Ping :arrow_right: BOT PING. 
+● :rainbow: $Ping :arrow_right: BOT PING. 
 
 ❖═════════════════════════════════════❖
 
