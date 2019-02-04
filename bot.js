@@ -265,4 +265,5 @@ client.on('ready', function(){
     }, ms);
 
 })
-(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
+
