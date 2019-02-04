@@ -5,8 +5,6 @@ const ownerid = '480540559233122324'
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setStatus("dnd")
-  client.user.setGame( `★ The Grid™ ★`,"https://www.twitch.tv/TheRealPredvkill")
     console.log('')
     console.log('')
     console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -79,12 +77,14 @@ client.on('message', message => {
 ❖═════════════════════════════════════❖  
 
 ● $Quorra :arrow_right: STATS BOT.
+
 ● $TG :arrow_right: $TG (Role Name).
+
 ● $Ping :arrow_right: BOT PING. 
 
 ❖═════════════════════════════════════❖
 
-:zap: Quorra BOT MADE BY : THE RARE RANGER :zap:
+:zap: QUORRA BOT MADE BY : THE RARE RANGER :zap:
  **`);
 
 message.author.sendEmbed(embed)
@@ -248,4 +248,21 @@ function sin_to_hex(i, phase) {
 }
 let place = 0;
 
-client.login(process.env.BOT_TOKEN);
+client.on('ready', function(){
+    var ms = 10000 ;
+    var setGame = ['★ $help ★','Grid™ | Server ' ];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`https://www.twitch.tv/TheRealPredvkill`);
+    }, ms);
+
+})
+(process.env.BOT_TOKEN);
