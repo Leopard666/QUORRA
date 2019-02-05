@@ -80,10 +80,11 @@ client.on('message', message => {
 
 ● :rocket: : $Ping :arrow_right: BOT PING ●
 
-❖═════════════════════════════════════❖
+● :books: : سيرفر دعم :arrow_right: https://discord.gg/aUW67Y7 ●
 
-   :zap: QUORRA BOT MADE BY : THE RARE RANGER :zap:
- **`);
+●●●●●●●●●● المزيد قريبا ان شاء الله! ●●●●●●●●●●●
+
+:zap: ─════════════ {✯ Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ✯} ════════════─ :zap:**`);
 
 message.author.sendEmbed(embed)
   }
