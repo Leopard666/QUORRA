@@ -70,7 +70,7 @@ client.on('message', message => {
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
-:rainbow:   [❖═════ Quorra Rainbow Bot Commands ═══════❖] :rainbow:  
+:rainbow: [❖═════ ● Quorra Rainbow Bot Commands ● ═══════❖] :rainbow:  
   
 ❖═════════════════════════════════════❖  
 
@@ -82,9 +82,9 @@ client.on('message', message => {
 
 ● :books: : سيرفر دعم :arrow_right: https://discord.gg/PzbDJwx ●
 
-:hearts: [❖═════ المزيد قريبا ان شاء الله! ═══════❖] :hearts: 
+:hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts: 
 
-:zap: ─═════ {✯ Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ✯} ═════─ :zap:
+:zap: ─═════ {✯ ● Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ● ✯} ═════─ :zap:
 
 ● The Grid™ - Official :copyright: **`);
 
