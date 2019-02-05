@@ -65,7 +65,7 @@ client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
     
-   message.channel.send('**:white_check_mark: Done" , " تــــم ارســالك في الخــاص :e_mail:**');
+   message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**');
    const embed = new Discord.RichEmbed()
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
@@ -171,7 +171,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
+            .setDescription("**:warning: : You Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
             return;
         }
@@ -180,7 +180,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription("**:warning: I Must Have The Administrator Permission :warning:**")
+            .setDescription("**:warning: : I Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
             return;
         }
@@ -189,7 +189,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription(":warning: Usage : **`$TG (Role Name)`** :warning:")
+            .setDescription(":rainbow: Usage : **`$TG (Role Name)`** :rainbow:")
             message.channel.send({embed});
             return;
         }
@@ -198,7 +198,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription(":warning: Something Went Wrong :warning:")
+            .setDescription(":warning: : Something Went Wrong :warning:")
             message.channel.send({embed});
             return;
         }
@@ -208,7 +208,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription("Quorra : :warning: **RainColor** Role Must Be Higher Than The Mentioned Role !")
+            .setDescription("Quorra : :warning: : **RainColor** Role Must Be Higher Than The Mentioned Role !")
             message.channel.send({embed});
             return;
         }
@@ -217,8 +217,8 @@ client.on('message', message => {
         const embed = new Discord.RichEmbed()
         .setAuthor("Rainbow", client.user.avatarURL)
         .setColor(0xE7F436)
-        .setDescription(":white_check_mark: Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
-        ":warning: : This Only Lasts 72 Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !")
+        .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
+        ":warning: : This Only Lasts 72 Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
         message.channel.send({embed});
 
         client.colors[message.guild.name] = {
