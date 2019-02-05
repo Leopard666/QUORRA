@@ -80,7 +80,7 @@ client.on('message', message => {
 
 ● :rocket: : $Ping :arrow_right: BOT PING ●
 
-● :books: : سيرفر دعم :arrow_right: https://discord.gg/aUW67Y7 ●
+● :books: : سيرفر دعم :arrow_right: https://discord.gg/PzbDJwx ●
 
 :hearts: [❖═════ المزيد قريبا ان شاء الله! ═══════❖] :hearts: 
 
