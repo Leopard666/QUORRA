@@ -132,11 +132,8 @@ client.colors = {}
 
 
 client.on('message', message => {
-    var prefix = "$"
-  if (message.author.x5bz) return;
-  if (!message.content.startsWith(prefix)) return;
-
-    if(command === "TG") {
+if (message.author.bot) return;
+if (message.content === ('$TG')) {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
