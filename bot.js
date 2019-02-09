@@ -28,21 +28,6 @@ client.on('ready', () => {
     console.log('')
 });
 
-client.on('message', message => {
-  if(!message.channel.guild) return;
-if (message.content.startsWith('$ping')) {
-if(!message.channel.guild) return;
-var msg = `${Date.now() - message.createdTimestamp}`
-var api = `${Math.round(client.ping)}`
-if (message.author.bot) return;
-let embed = new Discord.RichEmbed()
-.setAuthor(message.author.username,message.author.avatarURL)
-.setColor('RANDOM')
-.addField('**Time Taken:**',msg + " ms :signal_strength: ")
-.addField('**WebSocket:**',api + " ms :signal_strength: ")
-message.channel.send({embed:embed});
-}
-});
 
 client.on('message', message => {
   if (message.content === ('$Quorra')) {
@@ -61,6 +46,46 @@ client.on('message', message => {
   })
 }
 });
+
+function timeCon(time) {
+    let days = Math.floor(time % 31536000 / 86400)
+    let hours = Math.floor(time % 31536000 % 86400 / 3600)
+    let minutes = Math.floor(time % 31536000 % 86400 % 3600 / 60)
+    let seconds = Math.round(time % 31536000 % 86400 % 3600 % 60)
+    days = days > 9 ? days : '0' + days
+    hours = hours > 9 ? hours : '0' + hours
+    minutes = minutes > 9 ? minutes : '0' + minutes
+    seconds = seconds > 9 ? seconds : '0' + seconds
+    return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
+}
+
+var version = '1.3';
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "stats")) {
+    if(!message.channel.guild) return message.reply('** :x: This Command Only For Servers :x:**');
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``QUORRA STATS`` ')
+            .addField('``Uptime``', [timeCon(process.uptime())], true)
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true)
+            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+            .addField('``Node``' , `[${process.version} ]` , true)
+                  .addField('``My Prefix``' , `$` , true)
+                  .addField('``My Language``' , `[ Java Script ]` , true)
+                  .setFooter('By | TheRareRanger')
+    })
+}
+});
+
+
 client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
@@ -78,9 +103,9 @@ client.on('message', message => {
 
 ● :rainbow: : $TG :arrow_right: $TG (Role Name) ●
 
-● :rocket: : $Ping :arrow_right: BOT PING ●
-
 ● :books: : سيرفر دعم :arrow_right: https://discord.gg/PzbDJwx ●
+
+❖═════════════════════════════════════❖  
 
 :hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts: 
 
@@ -149,23 +174,6 @@ client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-    if(command === "stats") {
-        var time = process.uptime();
-        var uptime = (time + "").toHHMMSS();
-
-        const embed = new Discord.RichEmbed()
-        .setTitle(":tools: Stats")
-        .setColor(0x009688)
-        .setDescription( 
-        ":crown: " +              "Servers: " + client.guilds.size + "\n" + 
-        ":bust_in_silhouette: " + "Users: " + client.users.size + "\n" + 
-        ":clock12: " +            "Uptime: " + uptime)
-        message.channel.send({embed});
-    }
     if(command === "TG") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
@@ -198,7 +206,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription(":warning: : Something Went Wrong :warning:")
+            .setDescription(":warning: : **Something Went Wrong** :warning:")
             message.channel.send({embed});
             return;
         }
@@ -208,7 +216,7 @@ client.on('message', message => {
             const embed = new Discord.RichEmbed()
             .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
-            .setDescription("Quorra : :warning: : **RainColor** Role Must Be Higher Than The Mentioned Role !")
+            .setDescription(":warning: : **Quorra : (RainColor) Role Must Be Higher Than The Mentioned Role !** :warning: :")
             message.channel.send({embed});
             return;
         }
@@ -218,7 +226,7 @@ client.on('message', message => {
         .setAuthor("Rainbow", client.user.avatarURL)
         .setColor(0xE7F436)
         .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
-        ":warning: : This Only Lasts 72 Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
+        ":warning: : This Only Lasts "72" Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like ! :warning:**")
         message.channel.send({embed});
 
         client.colors[message.guild.name] = {
