@@ -134,13 +134,12 @@ client.colors = {}
 client.on('message', message => {
     var prefix = "$"
   if (!message.content.startsWith(prefix)) return; 
- let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
     if(command === "TG") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("QUORRA - RainBowBot", client.user.avatarURL)
+            .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
@@ -149,7 +148,7 @@ client.on('message', message => {
 
         if(!message.guild.me.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("QUORRA - RainBowBot", client.user.avatarURL)
+            .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription("**:warning: : I Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
@@ -158,7 +157,7 @@ client.on('message', message => {
 		
 		if(!message.member.guild.roles.find("name", args.join(" "))) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("RainBowBot", client.user.avatarURL)
+            .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription(":rainbow: Usage : **`$TG (Role Name)`** :rainbow:")
             message.channel.send({embed});
@@ -167,7 +166,7 @@ client.on('message', message => {
 
         if(message.member.guild.roles.find("name", args.join(" ")) === null) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("QUORRA - RainBowBot", client.user.avatarURL)
+            .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription(":warning: : **Something Went Wrong** :warning:")
             message.channel.send({embed});
@@ -177,7 +176,7 @@ client.on('message', message => {
 
         if(message.member.guild.roles.find("name", args.join(" ")).position >= message.guild.me.highestRole.position) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("QUORRA - RainBowBot", client.user.avatarURL)
+            .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription(":warning: : **Quorra : (RainColor) Role Must Be Higher Than The Mentioned Role !** :warning: :")
             message.channel.send({embed});
@@ -186,7 +185,7 @@ client.on('message', message => {
 
 
         const embed = new Discord.RichEmbed()
-        .setAuthor("QUORRA - RainBowBot", client.user.avatarURL)
+        .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
         .setColor(0xE7F436)
         .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
         ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like ! :warning:**")
