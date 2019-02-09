@@ -140,23 +140,11 @@ client.on('message', message => {
   command = command.slice(prefix.length);
 
   let args = message.content.split(" ").slice(1);
-    if(command === "bot") {
-        var time = process.uptime();
-        var uptime = (time + "").toHHMMSS();
 
-        const embed = new Discord.RichEmbed()
-        .setTitle(":tools: Stats")
-        .setColor(0x009688)
-        .setDescription( 
-        ":crown: " +              "Servers: " + client.guilds.size + "\n" + 
-        ":bust_in_silhouette: " + "Users: " + client.users.size + "\n" + 
-        ":clock12: " +            "Uptime: " + uptime)
-        message.channel.send({embed});
-    }
-    if(command === "TDN") {
+    if(command === "TG") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TDN", client.user.avatarURL)
+            .setAuthor("TG", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
             message.channel.send({embed});
