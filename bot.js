@@ -159,7 +159,7 @@ client.on('message', message => {
 		
 		if(!message.member.guild.roles.find("name", args.join(" "))) {
             const embed = new Discord.RichEmbed()
-            .setAuthor("TG", client.user.avatarURL)
+            .setAuthor("RainBowBot", client.user.avatarURL)
             .setColor(0x4336F4)
             .setDescription(":rainbow: Usage : **`$TG (Role Name)`** :rainbow:")
             message.channel.send({embed});
