@@ -135,6 +135,7 @@ client.on('message', message => {
     var prefix = "$"
   if (!message.content.startsWith(prefix)) return; 
 let command = message.content.split(" ")[0];
+command = command.slice(prefix.length);
   let args = message.content.split(" ").slice(1);
     if(command === "TG") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
