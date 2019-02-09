@@ -110,7 +110,7 @@ client.colors = {}
             }
             //try to change the role
             try{
-                guild.roles.find("name", client.colors[i].role).setColor(rainbow[place])
+                guild.roles.find(role => role.name === client.colors[i].role).setColor(rainbow[place])
                 
                 .catch(err => { 
                     delete client.colors[i]
@@ -155,8 +155,8 @@ command = command.slice(prefix.length);
             message.channel.send({embed});
             return;
         }
-		
-		if(!message.member.guild.roles.find("name", args.join(" "))) {
+
+		if(!message.member.guild.roles.find(role => role.name === args.join(" "))) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
@@ -165,7 +165,7 @@ command = command.slice(prefix.length);
             return;
         }
 
-        if(message.member.guild.roles.find("name", args.join(" ")) === null) {
+        if(message.member.guild.roles.find(role => role.name === args.join(" ")) === null) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
@@ -175,7 +175,7 @@ command = command.slice(prefix.length);
         }
 
 
-        if(message.member.guild.roles.find("name", args.join(" ")).position >= message.guild.me.highestRole.position) {
+        if(message.member.guild.roles.find(role => role.name === args.join(" ")).position >= message.guild.me.highestRole.position) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor(0x4336F4)
