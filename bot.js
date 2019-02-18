@@ -189,7 +189,7 @@ command = command.slice(prefix.length);
         .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
         .setColor(0xE7F436)
         .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
-        ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like ! :warning:**")
+        ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
         message.channel.send({embed});
 
         client.colors[message.guild.name] = {
