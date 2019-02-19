@@ -39,7 +39,7 @@ client.on('message',async message => {
                msg.edit('**:arrows_counterclockwise: Quorra Restarting...**');
             },2000);
         });
-        console.log(`${message.author.tag} [ ${message.author.id} ] Jarvis Has Restarted Successfully.`);
+        console.log(`${message.author.tag} [ ${message.author.id} ] Quorra Has Restarted Successfully.`);
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
