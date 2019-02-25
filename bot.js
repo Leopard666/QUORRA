@@ -243,7 +243,7 @@ let place = 0;
 
 client.on('ready', function(){//npm i ms 
     var ms = 10000 ;
-    var setGame = [`★ $help | RainBowBot ★`,`★ SERVERS : [${client.guilds.size}] ★`,`★ THE DAMNATION ★`];
+    var setGame = [`★ $help | RainBowBot ★`,`★ SERVERS : [${client.guilds.size}] ★`,`★ THE GRID™ ★`];
     var i = -1;
     var j = 0;
     setInterval(function (){
