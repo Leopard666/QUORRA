@@ -1,7 +1,12 @@
+// THIS BOT [RINZLER] CREATED BY THE RARER RARE RANGER - 2018 - 2019©
+// ==================================================================
+
 const prefix ="$";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ownerid = '480540559233122324'
+
+// ==================================================================
 
 function timeCon(time) {
     let days = Math.floor(time % 31536000 / 86400)
@@ -22,25 +27,26 @@ client.on('message', message => {
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
-            .setColor('RANDOM')
-            .setTitle('``🚀 [QUORRA] IS BACK ONLINE NOW 🚀`` ')
-            .addField('👑**Bot Owner**👑 :' , `[<@480540559233122324>]` , true)
-            .addField('``Bot Uptime``', [timeCon(process.uptime())], true)
-            .addField('``Bot Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('``Bot RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-            .addField('``TG - Servers``', [client.guilds.size], true)
-            .addField('``TG - Channels``' , `[ ${client.channels.size} ]` , true)
-            .addField('``TG - Users``' ,`[ ${client.users.size} ]` , true)
-            .addField('``Bot Name``' , `[ ${client.user.tag} ]` , true)
-            .addField('``Bot ID``' , `[ ${client.user.id} ]` , true)
-            .addField('``Bot Node``' , `[${process.version} ]` , true)
-                  .addField('``Bot Prefix``' , `$` , true)
-                  .addField('``Bot Language``' , `[ Java Script ]` , true)
-                  .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+            .setColor('859900')
+            .setTitle('**🚀 [QUORRA] IS BACK ONLINE NOW & [UPDATED] 🚀** ')
+	    .addField('``Bot Version :``' , `[ v1.3 ]` , true)
+            .addField('``👑 Bot Owner 👑 :``' , `[<@480540559233122324>]` , true)
+            .addField('``Bot Uptime :``', [timeCon(process.uptime())], true)
+            .addField('``Bot Ping :``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``Bot RAM Usage :``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``TG - Servers :``', [client.guilds.size], true)
+            .addField('``TG - Channels :``' , `[ ${client.channels.size} ]` , true)
+            .addField('``TG - Users :``' ,`[ ${client.users.size} ]` , true)
+            .addField('``Bot Name :``' , `[ ${client.user.tag} ]` , true)
+            .addField('``Bot ID :``' , `[ ${client.user.id} ]` , true)
+            .addField('``Bot Node :``' , `[${process.version} ]` , true)
+                  .addField('``Bot Prefix :``' , `$` , true)
+                  .addField('``Bot Language :``' , `[ Java Script ]` , true)
+                  .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
 	          .setTimestamp()
-	          .setDescription(` Attention [The Grid™] Users 
-[QUORRA] has returned from the darkness aka back online
-It must be your lucky day :smile: `)
+	          .setDescription(` **● Attention [The Grid™] Users 
+[QUORRA] Has Returned From The Darkness Aka Back Online
+It Must Be Your Lucky Day ! ●** `)
 
     })
 }
@@ -51,6 +57,50 @@ client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").the
 		   
  });
 
+// ==================================================================
+
+function timeCon(time) {
+    let days = Math.floor(time % 31536000 / 86400)
+    let hours = Math.floor(time % 31536000 % 86400 / 3600)
+    let minutes = Math.floor(time % 31536000 % 86400 % 3600 / 60)
+    let seconds = Math.round(time % 31536000 % 86400 % 3600 % 60)
+    days = days > 9 ? days : '0' + days
+    hours = hours > 9 ? hours : '0' + hours
+    minutes = minutes > 9 ? minutes : '0' + minutes
+    seconds = seconds > 9 ? seconds : '0' + seconds
+    return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
+}
+var version = '1.2';
+client.on('message', message => {
+    if(message.content.startsWith(prefix + "stats")) {
+ if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('859900')
+            .setTitle('**[QUORRA] STATS** ')
+	    .addField('``Bot Version :``' , `[ v1.2 ]` , true)
+            .addField('``👑 Bot Owner 👑 :``' , `[<@480540559233122324>]` , true)
+            .addField('``Bot Uptime :``', [timeCon(process.uptime())], true)
+            .addField('``Bot Ping :``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``Bot RAM Usage :``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``TG - Servers :``', [client.guilds.size], true)
+            .addField('``TG - Channels :``' , `[ ${client.channels.size} ]` , true)
+            .addField('``TG - Users :``' ,`[ ${client.users.size} ]` , true)
+            .addField('``Bot Name :``' , `[ ${client.user.tag} ]` , true)
+            .addField('``Bot ID :``' , `[ ${client.user.id} ]` , true)
+            .addField('``Bot Node :``' , `[${process.version} ]` , true)
+                  .addField('``Bot Prefix :``' , `$` , true)
+                  .addField('``Bot Language :``' , `[ Java Script ]` , true)
+                  .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	          .setTimestamp()
+
+    })
+}
+});
+
+// ==================================================================
 
 client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
@@ -72,6 +122,7 @@ client.on('message',async message => {
     }
 })
 
+// ==================================================================
 
 client.on('message', message => {
   if (message.content === ('$Quorra')) {
@@ -91,6 +142,7 @@ client.on('message', message => {
 }
 });
 
+// ==================================================================
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -123,6 +175,7 @@ message.author.sendEmbed(embed)
   }
 });
 
+// ==================================================================
 
 client.colors = {}
 
@@ -264,6 +317,7 @@ function sin_to_hex(i, phase) {
 }
 let place = 0;
 
+// ==================================================================
 
 client.on('ready', function(){//npm i ms 
  client.user.setStatus("dnd")
