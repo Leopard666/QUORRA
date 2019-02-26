@@ -39,9 +39,9 @@ function timeCon(time) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 }
-var version = '1.9';
+var version = '1.3';
 client.on('message', message => {
-    if(message.content.startsWith(prefix + "FFERA")) {
+    if(message.content.startsWith(prefix + "$QUORRA IS BACK ONLINE NOW")) {
     if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
     message.channel.send({
         embed: new Discord.RichEmbed()
@@ -59,7 +59,7 @@ client.on('message', message => {
             .addField('``Bot Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``Bot ID``' , `[ ${client.user.id} ]` , true)
             .addField('``Bot Node``' , `[${process.version} ]` , true)
-                  .addField('``Bot Prefix``' , `/` , true)
+                  .addField('``Bot Prefix``' , `$` , true)
                   .addField('``Bot Language``' , `[ Java Script ]` , true)
                   .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
 	          .setDescription(` Attention [The Grid™] Users 
@@ -71,7 +71,7 @@ It must be your lucky day :smile: `)
 });
 
 client.on('ready', function(){
-client.channels.get("542905235241304065").send("/FFERA").then(m => m.delete(1000));
+client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").then(m => m.delete(1000));
 		   
  });
 
