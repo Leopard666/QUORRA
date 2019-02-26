@@ -1,4 +1,4 @@
-// THIS BOT [RINZLER] CREATED BY THE RARER RARE RANGER - 2018 - 2019©
+// THIS BOT [QUORRA] CREATED BY THE RARER RARE RANGER - 2018 - 2019©
 // ==================================================================
 
 const prefix ="$";
@@ -70,7 +70,7 @@ function timeCon(time) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 }
-var version = '1.2';
+var version = '1.3';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "stats")) {
  if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
@@ -80,7 +80,7 @@ client.on('message', message => {
             .setThumbnail(client.user.avatarURL)
             .setColor('859900')
             .setTitle('**[QUORRA] STATS** ')
-	    .addField('``Bot Version :``' , `[ v1.2 ]` , true)
+	    .addField('``Bot Version :``' , `[ v1.3 ]` , true)
             .addField('``👑 Bot Owner 👑 :``' , `[<@480540559233122324>]` , true)
             .addField('``Bot Uptime :``', [timeCon(process.uptime())], true)
             .addField('``Bot Ping :``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
