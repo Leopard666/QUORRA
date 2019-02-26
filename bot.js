@@ -3,31 +3,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const ownerid = '480540559233122324'
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    console.log('')
-    console.log('')
-    console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-    console.log(`[Start] ${new Date()}`);
-    console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-    console.log('')
-    console.log('╔[════════════════════════════════════]╗');
-    console.log(`Logged in as * [ " ${client.user.username} " ]`);
-    console.log('')
-    console.log('Informations :')
-    console.log('')
-    console.log(`servers! [ " ${client.guilds.size} " ]`);
-    console.log(`Users! [ " ${client.users.size} " ]`);
-    console.log(`channels! [ " ${client.channels.size} " ]`);
-    console.log('╚[════════════════════════════════════]╝')
-    console.log('')
-    console.log('╔[════════════]╗')
-    console.log('Quorra Is Online Now !')
-    console.log('╚[════════════]╝')
-    console.log('')
-    console.log('')
-});
-
 function timeCon(time) {
     let days = Math.floor(time % 31536000 / 86400)
     let hours = Math.floor(time % 31536000 % 86400 / 3600)
@@ -62,6 +37,7 @@ client.on('message', message => {
                   .addField('``Bot Prefix``' , `$` , true)
                   .addField('``Bot Language``' , `[ Java Script ]` , true)
                   .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	          .setTimestamp()
 	          .setDescription(` Attention [The Grid™] Users 
 [QUORRA] has returned from the darkness aka back online
 It must be your lucky day :smile: `)
