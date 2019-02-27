@@ -341,5 +341,6 @@ client.on('ready', function(){//npm i ms
 
 });
 
+// ==================================================================
 
 client.login(process.env.BOT_TOKEN);
