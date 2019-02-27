@@ -22,7 +22,7 @@ function timeCon(time) {
 var version = '1.3';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "QUORRA IS BACK ONLINE NOW")) {
-    if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
+    if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -73,7 +73,7 @@ function timeCon(time) {
 var version = '1.3';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "stats")) {
- if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**');
+ if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -104,13 +104,13 @@ client.on('message', message => {
 
 client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "480540559233122324") return message.reply('**❎ | You Aren\'t The Bot Owner !**');
+        if(message.author.id !== "480540559233122324") return message.reply('**❎ | You Aren\'t The Bot Owner !**').then(m => m.delete(60000));
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: Quorra Restarting..**');
+               msg.edit('**:arrows_counterclockwise: Quorra Restarting..**').then(m => m.delete(60000));
             },1000);
             setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: Quorra Restarting...**');
+               msg.edit('**:arrows_counterclockwise: Quorra Restarting...**').then(m => m.delete(60000));
             },2000);
         });
         console.log(`${message.author.tag} [ ${message.author.id} ] Quorra Has Restarted Successfully.`);
@@ -137,7 +137,10 @@ client.on('message', message => {
           .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
           .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
           .addField('**Bot Owner**👑 :' , `[<@480540559233122324>]` , true)
-          .setFooter(message.author.username, message.author.avatarURL)
+          .setFooter(client.author.username, client.author.avatarURL)
+	  .setAuthor(client.guild.name, client.guild.iconURL)   
+          .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+          .setTimestamp()
   })
 }
 });
@@ -148,7 +151,7 @@ client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
     
-   message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**');
+   message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**').then(m => m.delete(60000));
    const embed = new Discord.RichEmbed()
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
@@ -167,10 +170,10 @@ client.on('message', message => {
 
 :hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts: 
 
-:zap: ─══ {✯ ● Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ● ✯} ══─ :zap:
-
-● The Grid™ - Official :copyright: **`);
-
+:zap: ─══ {✯ ● Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ● ✯} ══─ :zap: **`)
+.setAuthor(message.guild.name, message.guild.iconURL)   
+.setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+.setTimestamp()
 message.author.sendEmbed(embed)
   }
 });
