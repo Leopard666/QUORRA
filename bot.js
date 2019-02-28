@@ -132,6 +132,7 @@ client.on('message', message => {
           .setThumbnail(client.user.avatarURL)
           .setColor('RANDOM')
           .addField('**Bot Ping**🚀 :' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+	  .addField('**Bot Version**🔰 :' , `[ v2.0 ]` , true)
           .addField('**Servers**📚 :', [client.guilds.size], true)
           .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
           .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
@@ -239,8 +240,11 @@ command = command.slice(prefix.length);
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-            .setColor(0x4336F4)
+            .setColor('RANDOM')
             .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
+	    .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	    .addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	    .setTimestamp()
             message.channel.send({embed});
             return;
         }
@@ -248,8 +252,11 @@ command = command.slice(prefix.length);
         if(!message.guild.me.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-            .setColor(0x4336F4)
+            .setColor('RANDOM')
             .setDescription("**:warning: : I Must Have The Administrator Permission :warning:**")
+	    .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	    .addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	    .setTimestamp()
             message.channel.send({embed});
             return;
         }
@@ -257,8 +264,11 @@ command = command.slice(prefix.length);
 		if(!message.member.guild.roles.find(role => role.name === args.join(" "))) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-            .setColor(0x4336F4)
+            .setColor('RANDOM')
             .setDescription(":rainbow: Usage : **`$TG (Role Name)`** :rainbow:")
+	    .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	    .addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	    .setTimestamp()
             message.channel.send({embed});
             return;
         }
@@ -266,8 +276,11 @@ command = command.slice(prefix.length);
         if(message.member.guild.roles.find(role => role.name === args.join(" ")) === null) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-            .setColor(0x4336F4)
+            .setColor('RANDOM')
             .setDescription(":warning: : **Something Went Wrong** :warning:")
+	    .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	    .addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	    .setTimestamp()
             message.channel.send({embed});
             return;
         }
@@ -276,8 +289,11 @@ command = command.slice(prefix.length);
         if(message.member.guild.roles.find(role => role.name === args.join(" ")).position >= message.guild.me.highestRole.position) {
             const embed = new Discord.RichEmbed()
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-            .setColor(0x4336F4)
+            .setColor('RANDOM')
             .setDescription(":warning: : **Quorra : (RainColor) Role Must Be Higher Than The Mentioned Role !** :warning: :")
+	    .setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	    .addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	    .setTimestamp()
             message.channel.send({embed});
             return;
         }
@@ -285,9 +301,12 @@ command = command.slice(prefix.length);
 
         const embed = new Discord.RichEmbed()
         .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
-        .setColor(0xE7F436)
+        .setColor('RANDOM')
         .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
         ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
+	.setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+	.addField('``QUORRA - VERSION :``' , `[ v1.3 ]`)
+	.setTimestamp()
         message.channel.send({embed});
 
         client.colors[message.guild.name] = {
