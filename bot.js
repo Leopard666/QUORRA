@@ -152,6 +152,9 @@ client.on('message', message => {
     
    message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**').then(m => m.delete(60000));
    const embed = new Discord.RichEmbed()
+  .setThumbnail(client.user.avatarURL)
+  .addField('**BOT - VERSION **:' , `[ v2.0 ]`)
+  .addField('**BOT - OWNER **👑 :' , `[<@480540559233122324>]`)
   .setAuthor(message.author.username,message.author.avatarURL)
   .setColor('RANDOM')
   .setDescription(`**
@@ -167,11 +170,10 @@ client.on('message', message => {
 
 ❖═════════════════════════════════════❖  
 
-:hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts: 
+:hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts:**`) 
 
-:zap: ─══ {✯ ● Bot Made By ŦĐŇ™漫Ranger√ ⚡#4474 ● ✯} ══─ :zap: **`)
 .setAuthor(message.guild.name, message.guild.iconURL)   
-.setFooter('❖══ ● 🔰 [ THE GRID™ - OFFICIAL ] 🔰 ● ══❖')
+.setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
 .setTimestamp()
 message.author.sendEmbed(embed)
   }
