@@ -139,7 +139,6 @@ client.on('message', message => {
   if (message.content === ('$Quorra')) {
   message.channel.send({
       embed: new Discord.RichEmbed()
-          .setAuthor(client.user.username,client.user.avatarURL)
           .setThumbnail(client.user.avatarURL)
           .setColor('RANDOM')
           .addField('**Bot Ping** 🚀 :' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
