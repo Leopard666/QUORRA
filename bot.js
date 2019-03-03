@@ -119,10 +119,11 @@ client.on('guildCreate', guild => {
 
 // ==================================================================
 
-
-client.on('message',async message => {
-    if(message.content === prefix + "restart") {
+const prefix = "$";
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
+    if(message.content === prefix + "restart") {
           client.channels.get("542905235241304065").send("⚠️ **QUORRA IS RESTARTING NOW.. , PLEASE WAIT** ⚠️").then(m => m.delete(60000));
         console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         console.log(`⚠️ QUORRA IS RESTARTING NOW... ⚠️`);
