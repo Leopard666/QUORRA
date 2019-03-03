@@ -57,6 +57,8 @@ It Must Be Your Lucky Day ! ● ** `)
 }
 });
 
+// ==================================================================
+
 client.on('ready', function(){
 client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").then(m => m.delete(500));
 		   
