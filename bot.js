@@ -110,6 +110,7 @@ client.on('guildCreate', guild => {
     .setColor('RANDOM')
     .setDescription(`:heart: **شكراً لك لإضافه البوت الى سيرفرك** :heart:`)
     .addField('**Bot Version** :robot: :' , `[ v2.0 ]`)
+    .addField('**Bot CMD** 🔮 :' , `Use $help For Bot Commands`)
     .addField('**Bot Owner** 👑 :' , `[<@480540559233122324>]`)
     .addField('**Bot Name** 🔰 :' , `[ ${client.user.tag} ]`)
     .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
