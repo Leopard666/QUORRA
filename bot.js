@@ -104,25 +104,35 @@ client.on('message', message => {
 
 // ==================================================================
 
+client.on('guildCreate', guild => {
+    var embed = new Discord.RichEmbed()
+    .setThumbnail(client.user.avatarURL)
+    .setColor('RANDOM')
+    .setDescription(`:heart: **شكراً لك لإضافه البوت الى سيرفرك** :heart:`)
+    .addField('**Bot Version** :robot: :' , `[ v2.0 ]`)
+    .addField('**Bot Owner** 👑 :' , `[<@480540559233122324>]`)
+    .addField('**Bot Name** 🔰 :' , `[ ${client.user.tag} ]`)
+    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+    .setTimestamp()
+        guild.owner.send(embed)
+  });
+
+// ==================================================================
+
+
 client.on('message',async message => {
-    if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "480540559233122324") return message.reply('**❎ | You Aren\'t The Bot Owner !**').then(m => m.delete(60000));
-        message.channel.send('**Restarting.**').then(msg => {
-            setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: Quorra Restarting..**').then(m => m.delete(60000));
-            },1000);
-            setTimeout(() => {
-               msg.edit('**:arrows_counterclockwise: Quorra Restarting...**').then(m => m.delete(60000));
-            },2000);
-        });
-        console.log(`${message.author.tag} [ ${message.author.id} ] Quorra Has Restarted Successfully.`);
-        console.log(`Restarting..`);
-        setTimeout(() => {
-            client.destroy();
-            client.login(process.env.BOT_TOKEN);
-        },3000);
+    if(message.content === prefix + "restart") {
+      if (!devs.includes(message.author.id)) return;
+          client.channels.get("542905235241304065").send("⚠️ **QUORRA IS RESTARTING NOW.. , PLEASE WAIT** ⚠️").then(m => m.delete(60000));
+        console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        console.log(`⚠️ QUORRA IS RESTARTING NOW... ⚠️`);
+        console.log("===============================================\n\n");
+        client.destroy();
+        child_process.fork(__dirname + "/bot.js");
+        console.log(`QUORRA IS BACK ONLINE NOW AND READY TO FIGHT`);
     }
-})
+  
+  });
 
 // ==================================================================
 
