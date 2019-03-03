@@ -127,8 +127,8 @@ client.on('message', message => {
         console.log(`⚠️ QUORRA IS RESTARTING NOW... ⚠️`);
         console.log("===============================================\n\n");
         client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-        console.log(`QUORRA IS BACK ONLINE NOW AND READY TO FIGHT`);
+        client.login(process.env.BOT_TOKEN);
+	    console.log(`QUORRA IS BACK ONLINE NOW AND READY TO FIGHT`);
     }
   
   });
