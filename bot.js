@@ -183,7 +183,6 @@ client.on('message', message => {
 
 :hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts:**`) 
 
-.setAuthor(message.guild.name, message.guild.iconURL)   
 .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
 .setTimestamp()
 message.author.sendEmbed(embed)
