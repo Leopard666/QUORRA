@@ -23,7 +23,7 @@ function timeCon(time) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 }
-var version = '1.3';
+var version = '2.0';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "QUORRA IS BACK ONLINE NOW")) {
     if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
@@ -33,7 +33,7 @@ client.on('message', message => {
             .setThumbnail(client.user.avatarURL)
             .setColor('859900')
             .setTitle('**🚀 [QUORRA] IS BACK ONLINE NOW & [UPDATED] 🚀** ')
-	    .addField('``Bot Version :``' , `[ v1.3 ]` , true)
+	    .addField('``Bot Version :``' , `[ v2.0 ]` , true)
             .addField('``👑 Bot Owner 👑 :``' , `[ <@480540559233122324> ]` , true)
             .addField('``Bot Uptime :``', [ timeCon(process.uptime()) ] , true)
             .addField('``Bot Ping :``' , [ `${Date.now() - message.createdTimestamp}` + 'MS' ] , true)
@@ -77,7 +77,7 @@ function timeCon(time) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 }
-var version = '1.3';
+var version = '2.0';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "stats")) {
  if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
@@ -87,7 +87,7 @@ client.on('message', message => {
             .setThumbnail(client.user.avatarURL)
             .setColor('859900')
             .setTitle('**[QUORRA] STATS** ')
-	    .addField('``Bot Version :``' , `[ v1.3 ]` , true)
+	    .addField('``Bot Version :``' , `[ v2.0 ]` , true)
             .addField('``👑 Bot Owner 👑 :``' , `[ <@480540559233122324> ]` , true)
             .addField('``Bot Uptime :``', [ timeCon(process.uptime()) ] , true)
             .addField('``Bot Ping :``' , [ `${Date.now() - message.createdTimestamp}` + 'MS' ] , true)
