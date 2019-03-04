@@ -129,17 +129,25 @@ client.on('guildCreate', guild => {
 client.on('message', message => {
     if(message.content === prefix + "restart") {
 	     if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
-          client.channels.get("542905235241304065").send("⚠️ **QUORRA IS RESTARTING NOW.. , PLEASE WAIT** ⚠️").then(m => m.delete(60000));
-        console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.log(`⚠️ QUORRA IS RESTARTING NOW... ⚠️`);
-        console.log("===============================================\n\n");
-        client.destroy();
-        client.login(process.env.BOT_TOKEN);
-	    console.log(`QUORRA IS BACK ONLINE NOW AND READY TO FIGHT`);
-    }
-  
-  });
+          client.channels.get("542905235241304065").send({
+	     embed: new Discord.RichEmbed()
+	    .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('b58900')
+	    .setFooter('● 🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰 ●')
+	    .setTimestamp()
+            .setTitle('**● :robot: [QUORRA] IS REBOOTING NOW !**')
+	    .setDescription(`**⚠️ PLEASE WAIT TILL EVERYTHING SETUP ⚠️**`)
+		 });
+	    console.log(`${message.author.tag} [ ${message.author.id} ] Quorra Has Restarted Successfully.`);
+            console.log(`Quorra Is Restarting Now..`);
+            setTimeout(() => {
+            client.destroy();
+            client.login(process.env.BOT_TOKEN);
+            },3000);
 
+}
+});
 // ==================================================================
 
 client.on('message', message => {
