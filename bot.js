@@ -32,7 +32,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('859900')
-            .setTitle('**🚀 [QUORRA] IS BACK ONLINE NOW & [UPDATED] 🚀** ')
+            .setTitle('**🚀 HI, IM BACK [ONLINE] NOW & [UPDATED] 🚀**')
 	    .addField('``Bot Version :``' , `[ v2.0 ]` , true)
             .addField('``👑 Bot Owner 👑 :``' , `[ <@480540559233122324> ]` , true)
             .addField('``Bot Uptime :``', [ timeCon(process.uptime()) ] , true)
@@ -49,13 +49,19 @@ client.on('message', message => {
                   .addField('``Bot Language :``' , `[ Java Script ]` , true)
                   .setFooter('● 🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰 ●')
 	          .setTimestamp()
-	          .setDescription(`**:robot: ● Attention [The Grid™] Users 
-[QUORRA] Has Returned From The Darkness Aka Back Online
-It Must Be Your Lucky Day ! ● ** `)
 
     })
 }
 });
+
+// ==================================================================
+
+
+client.on('ready', function(){
+client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").then(m => m.delete(500));
+		   
+ });
+
 
 // ==================================================================
 
@@ -67,13 +73,6 @@ client.on('message', message => {
 	  
   }
 })
-
-// ==================================================================
-
-client.on('ready', function(){
-client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").then(m => m.delete(500));
-		   
- });
 
 // ==================================================================
 
@@ -134,6 +133,28 @@ client.on('guildCreate', guild => {
     .setTimestamp()
         guild.owner.send(embed)
   });
+
+// ==================================================================
+
+ client.on('message', message => {
+    if(message.content === prefix + "shutdown") {
+	    if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));    
+            client.channels.get("542905235241304065").send({
+	    embed: new Discord.RichEmbed()
+	    .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('dc322f')
+	    .setFooter('● 🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰 ●')
+	    .setTimestamp()
+            .setTitle('**● :robot: [QUORRA] IS SHUTDOWN NOW BY THE OWNERS !**')
+	    .setDescription(`**⚠️ PLEASE WAIT TILL EVERYTHING SETUP ⚠️**`)
+		    });
+            console.log(`${message.author.tag} [ ${message.author.id} ] Quorra Has ShutDown Successfully.`);
+            setTimeout(() => {
+            client.destroy();
+            },3000);
+}
+});    
 
 // ==================================================================
 
