@@ -334,7 +334,7 @@ command = command.slice(prefix.length);
         .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
 	.setThumbnail(client.user.avatarURL)
         .setColor('RANDOM')
-        .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To **`" + args.join(" ") + "`**" + "\n" +
+        .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To : **`" + args.join(" ") + "`**" + "\n" +
         ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
 	.setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
 	.addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
