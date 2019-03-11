@@ -59,6 +59,17 @@ It Must Be Your Lucky Day ! ● ** `)
 
 // ==================================================================
 
+client.on('message', message => {
+  if(message.content ===  prefix + 'leaveserver') {
+	     message.channel.send('**:white_check_mark: ● Done - Now Im Gonna Go Back To My HQ , Cya ● **').then(m => m.delete(60000));
+       if (message.author.id ! == 480540559233122324) return;
+  message.guild.leave();
+	  
+  }
+})
+
+// ==================================================================
+
 client.on('ready', function(){
 client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").then(m => m.delete(500));
 		   
