@@ -119,7 +119,7 @@ client.on('guildCreate', guild => {
     .addField('**● Bot CMD** 🔮 :' , `**Use $help For Bot Commands**`)
     .addField('**● Bot Owner** 👑 :' , `**[<@480540559233122324>]**`)
     .addField('**● Bot Name** 🔰 :' , `**[ ${client.user.tag} ]**`)
-    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
     .setTimestamp()
         guild.owner.send(embed)
   });
@@ -163,7 +163,7 @@ client.on('message', message => {
           .addField('**Users** 🔮 :' ,`[ ${client.users.size} ]` , true)
           .addField('**Bot Name** 🔰 :' , `[ ${client.user.tag} ]` , true)
           .addField('**Bot Owner** 👑 :' , `[ <@480540559233122324> ]` , true)
-          .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+          .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
           .setTimestamp()
   })
 }
@@ -197,7 +197,7 @@ client.on('message', message => {
 
 :hearts: [❖═════ ● المزيد قريبا ان شاء الله! ● ═══════❖] :hearts:**`) 
 
-.setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+.setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 .setTimestamp()
 message.author.sendEmbed(embed)
   }
@@ -269,7 +269,7 @@ command = command.slice(prefix.length);
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
             .setDescription("**:warning: You Must Have The Administrator Permission :warning:**")
-	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
@@ -282,7 +282,7 @@ command = command.slice(prefix.length);
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
             .setDescription("**:warning: : I Must Have The Administrator Permission**")
-	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
@@ -295,7 +295,7 @@ command = command.slice(prefix.length);
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
             .setDescription(":rainbow: Type : **`$TG (Role Name)`** :rainbow:")
-	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
@@ -308,7 +308,7 @@ command = command.slice(prefix.length);
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
             .setDescription(":warning: : **Something Went Wrong** :warning:")
-	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
@@ -322,7 +322,7 @@ command = command.slice(prefix.length);
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
             .setDescription("**:warning: : (QUORRA) Role Must Be Higher Than The Mentioned Role !**")
-	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
@@ -336,7 +336,7 @@ command = command.slice(prefix.length);
         .setColor('RANDOM')
         .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To : **`" + args.join(" ") + "`**" + "\n" +
         ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
-	.setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
+	.setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	.addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	.setTimestamp()
         message.channel.send({embed});
