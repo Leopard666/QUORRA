@@ -321,7 +321,7 @@ command = command.slice(prefix.length);
 	    .setThumbnail(client.user.avatarURL)
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
             .setColor('RANDOM')
-            .setDescription(":warning: **Quorra : (RainColor) Role Must Be Higher Than The Mentioned Role !**")
+            .setDescription("**:warning: : (QUORRA) Role Must Be Higher Than The Mentioned Role !**")
 	    .setFooter('🔰 [ THE GRID™ - OFFICIAL ] 🔰')
 	    .addField('QUORRA - VERSION :' , `**[ v2.0 ]**`)
 	    .setTimestamp()
