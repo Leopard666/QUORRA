@@ -9,6 +9,8 @@ const prefix ="$";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ownerid = '480540559233122324'
+let cooldown = new Set();
+let cdseconds = 5;
 
 // ==================================================================
 
@@ -90,6 +92,14 @@ function timeCon(time) {
 var version = '2.0';
 client.on('message', message => {
     if(message.content.startsWith(prefix + "stats")) {
+      if(!message.content.startsWith(prefix)) return;
+        if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("**:no_entry: You have to wait [5] seconds between commands :no_entry:**")
+  }
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
+    cooldown.add(message.author.id);
+ // } 
  if(!message.channel.guild) return message.reply('**:x: This Command Only For Servers :x:**').then(m => m.delete(60000));
     message.channel.send({
         embed: new Discord.RichEmbed()
@@ -116,6 +126,11 @@ client.on('message', message => {
 
     })
 }
+	
+    setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+	
 });
 
 // ==================================================================
@@ -184,6 +199,14 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === ('$Quorra')) {
+    if(!message.content.startsWith(prefix)) return;
+        if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("**:no_entry: You have to wait [5] seconds between commands :no_entry:**")
+  }
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
+    cooldown.add(message.author.id);
+ // } 
   message.channel.send({
       embed: new Discord.RichEmbed()
           .setThumbnail(client.user.avatarURL)
@@ -199,6 +222,11 @@ client.on('message', message => {
           .setTimestamp()
   })
 }
+	
+    setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+	
 });
 
 // ==================================================================
@@ -206,7 +234,14 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.author.bot) return;
    if (message.content === prefix + "help") {
-    
+       if(!message.content.startsWith(prefix)) return;
+         if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("**:no_entry: You have to wait [5] seconds between commands :no_entry:**")
+  }
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
+    cooldown.add(message.author.id);
+ // }  
    message.channel.send('**:white_check_mark: ● Done , تــــم ارســالك في الخــاص ● :e_mail:**').then(m => m.delete(60000));
    const embed = new Discord.RichEmbed()
   .setThumbnail(client.user.avatarURL)
@@ -232,7 +267,13 @@ client.on('message', message => {
 .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 .setTimestamp()
 message.author.sendEmbed(embed)
+	   
+    setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+	   
   }
+	
 });
 
 // ==================================================================
@@ -295,7 +336,16 @@ let command = message.content.split(" ")[0];
 command = command.slice(prefix.length);
   let args = message.content.split(" ").slice(1);
     if(command === "TG") {
+      if(!message.content.startsWith(prefix)) return;
+        if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("**:no_entry: You have to wait [5] seconds between commands :no_entry:**")
+  }
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
+    cooldown.add(message.author.id);
+ // }      
         if(!message.member.hasPermission("ADMINISTRATOR")) {
+		
             const embed = new Discord.RichEmbed()
 	    .setThumbnail(client.user.avatarURL)
             .setAuthor("QUORRA - RAINBOWBOT", client.user.avatarURL)
@@ -380,6 +430,11 @@ command = command.slice(prefix.length);
         }
 
     }
+	
+    setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+	
 });
 
 
