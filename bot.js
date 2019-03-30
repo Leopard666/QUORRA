@@ -67,14 +67,45 @@ client.channels.get("542905235241304065").send("$QUORRA IS BACK ONLINE NOW").the
 
 // ==================================================================
 
-client.on('message', message => {
-  if(message.content ===  prefix + 'leaveserver') {
-	     message.channel.send('**:white_check_mark: ● Done - Now Im Gonna Go Back To My HQ , Cya ● **').then(m => m.delete(60000));
-       if (message.author.id !== "480540559233122324") return;
-  message.guild.leave();
-	  
-  }
+client.on("message", async message => {
+	
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	
+    const command = args.shift().toLowerCase();
+	
+    if(message.author.id != "480540559233122324") return;
+	
+    if(message.author.bot) return;
+	
+    if (command == "leaveserver") {
+	    
+        if(!args[0] || args[1]) return message.reply(`| Type : **${prefix}leaveserver & <guild_id>** | :x:`);
+	    	  
+        let GuildId = client.guilds.get(args[0])
+	
+        if(!GuildId) return message.reply(`**:x: | Guild "ID" Is Not Detected | :x:**`);
+	    
+        GuildId.leave().then(m => message.channel.send("Done | I Have Left : **["+GuildId.name+"]** Server | ✅"))
+    }     
 })
+
+// ==================================================================
+
+////////////////// [ 🔰 CONSOL QUORRA LOGS 🔰 ] //////////////////
+
+client.on('warn', console.warn);
+
+client.on('error', console.error);
+
+client.on('disconnect', () => console.log('🔰 I Just Disconnected, Making SureYyou Know, I Will Reconnect Now... 🔰'));
+
+client.on('reconnecting', () => console.log('🔰 I Am Reconnecting Now ! 🔰'));
+
+client.on('ready', function() {
+
+    console.log(`🔰 [ ${client.user.username} ] : IS READY TO FIGHT NOW 🔰`);
+
+});
 
 // ==================================================================
 
