@@ -174,7 +174,7 @@ client.on('guildCreate', guild => {
     .setColor('RANDOM')
     .setDescription(`:heart: **شكراً لك لإضافه البوت الى سيرفرك** :heart:`)
     .addField('**● Bot Version** :robot: :' , `**[ v2.0 ]**`)
-    .addField('**● Bot CMD** 🔮 :' , `**Use $help For Bot Commands**`)
+    .addField('**● Bot CMD** :keyboard: :' , `**Use $help For Bot Commands**`)
     .addField('**● Bot Owner** 👑 :' , `**[<@480540559233122324>]**`)
     .addField('**● Bot Name** 🔰 :' , `**[ ${client.user.tag} ]**`)
     .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
@@ -413,7 +413,6 @@ command = command.slice(prefix.length);
             .setDescription(":rainbow: | Type : **`$TG (Role Name)`** | :rainbow:")
 	    .setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	    .addField(':robot: | QUORRA - VERSION :' , `**[ v2.0 ]**`)
-	    .addField('👑 | BOT - OWNER :' , `**[ <@480540559233122324> ]**`)
 	    .setTimestamp()
             message.channel.send({embed});
             return;
@@ -451,11 +450,12 @@ command = command.slice(prefix.length);
         .setAuthor("★ QUORRA - RAINBOWBOT ★", client.user.avatarURL)
 	.setThumbnail(client.user.avatarURL)
         .setColor('RANDOM')
-        .setDescription("**:white_check_mark: : Successfully Applied Quorra Rainbow Colors To : **`" + args.join(" ") + "`**" + "\n" +
-        ":warning: : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
+        .setDescription("**:white_check_mark: | : Successfully Applied Quorra Rainbow Colors To : **`" + args.join(" ") + "`**" + "\n" +
+        ":warning: | : This Only Lasts (72) Hours, Then it Will Stop Working. You Can Still Apply it Whenever You'd Like !**")
 	.setFooter('🔰 [ THE GRID™ - OFFICIAL - 2019© ] 🔰')
 	.addField(':robot: | QUORRA - VERSION :' , `**[ v2.0 ]**`)
         .addField('👑 | BOT - OWNER :' , `**[ <@480540559233122324> ]**`)
+	.addField(':keyboard: | BOT - CMD :' , `**Use $help For Bot Commands**`)
 	.setTimestamp()
         message.channel.send({embed});
 
